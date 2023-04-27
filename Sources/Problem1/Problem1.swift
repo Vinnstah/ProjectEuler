@@ -12,12 +12,20 @@ public struct Problem1 {
         below upperBound: I
     ) -> some FixedWidthInteger {
         
-        (0..<upperBound)
-            .filter {
-                $0.isMultiple(of: a) ||
-                $0.isMultiple(of: b)
-            }
-            .reduce(0, +)
+        Set(
+            stride(
+                from: I.zero,
+                to: upperBound,
+                by: I.Stride(a))
+        )
+        .union(
+            Swift.stride(
+                from: I.zero,
+                to: upperBound,
+                by: I.Stride(b)
+            )
+        )
+        .reduce(0, +)
     }
     
     
