@@ -16,7 +16,7 @@ let package = Package(
                    dependencies: ["Problem1"]),
         
         .executableTarget(
-            name: "Problem2",
+            name: "Problem3",
             dependencies: [])
     ]
 )
