@@ -12,14 +12,14 @@ public struct Problem5 {
     ) -> some FixedWidthInteger {
         
         let range = 1...numbers
-        let primesInRange: I = I(primes
-            .map { element in
-                if I(element) < numbers {
-                    return Int(element)
+        let primesInRange: Int = primes
+            .map {
+                if I($0) < numbers {
+                    return Int($0)
                 }
                 return 1
             }
-            .reduce(1, *))
+            .reduce(1, *)
         
         for int in stride(from: 0, to: 100_000_000_000, by: Int.Stride(primesInRange)) {
             guard int != 0 else {
