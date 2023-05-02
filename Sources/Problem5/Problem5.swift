@@ -13,12 +13,12 @@ public struct Problem5 {
         numbersUpTo numbers: I
     ) -> some FixedWidthInteger {
         let range = 1...numbers
+        let productOfTheLast2Elements = numbers * (numbers-1)
         for int in stride(from: 0, to: 100_000_000_000, by: Int.Stride(numbers-1)) {
-            print(int)
             guard int != 0 else {
                 continue
             }
-            if !int.isMultiple(of: Int(range.last!)) {
+            if !int.isMultiple(of: Int(productOfTheLast2Elements)) {
                     continue
                 }
             if range.allSatisfy( { int.isMultiple(of: Int($0))}) {
