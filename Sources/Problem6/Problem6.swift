@@ -1,7 +1,6 @@
 @main
 public struct Problem6 {
     public static func main() {
-//        assert(differenceBetweenSumOfSquaresForAllNumbers(upTo: 1) == 2640, "\(differenceBetweenSumOfSquaresForAllNumbers(upTo: 10))")
         print(differenceBetweenSumOfSquaresForAllNumbers(upTo: 100))
     }
     
@@ -25,8 +24,6 @@ public struct Problem6 {
             .map { $0 }
             .reduce(0, +)
         
-        let squareOfTheSum = theSum * theSum
-        
-        return squareOfTheSum - sumOfSquares
+        return (theSum * theSum) - sumOfSquares
     }
 }

@@ -33,5 +33,7 @@ let package = Package(
         .executableTarget(
             name: "Problem6",
             dependencies: []),
+        .testTarget(name: "Problem6Test",
+                   dependencies: ["Problem6"]),
     ]
 )
