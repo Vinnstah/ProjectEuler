@@ -20,20 +20,35 @@ let package = Package(
             dependencies: []),
         .testTarget(name: "Problem3Test",
                    dependencies: ["Problem3"]),
+        
         .executableTarget(
             name: "Problem4",
             dependencies: []),
         .testTarget(name: "Problem4Test",
                    dependencies: ["Problem4"]),
+        
         .executableTarget(
             name: "Problem5",
             dependencies: []),
         .testTarget(name: "Problem5Test",
                    dependencies: ["Problem5"]),
+        
         .executableTarget(
             name: "Problem6",
             dependencies: []),
         .testTarget(name: "Problem6Test",
                    dependencies: ["Problem6"]),
+        
+            .executableTarget(
+                name: "Problem7",
+                dependencies: []),
+            .testTarget(name: "Problem7Test",
+                       dependencies: ["Problem7"]),
+        
+            .executableTarget(
+                name: "Problem8",
+                dependencies: []),
+            .testTarget(name: "Problem8Test",
+                       dependencies: ["Problem8"]),
     ]
 )
